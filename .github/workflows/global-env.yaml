@@ -1,0 +1,21 @@
+name: Environment Variables
+on:
+  push:
+    branches: feature/global-env
+
+env:
+  GLOBAL_VAR: thisisatest
+
+jobs:
+  first-job:
+    name: A job
+    runs-on: unbuntu-latest
+    steps:
+      - name: Output Global Variable
+        run: echo "${GLOBAL_VAR}"
+  second-job:
+    name: Another job
+    runs-on: unbuntu-latest
+    steps:
+      - name: Output Global Variable
+        run: echo "${GLOBAL_VAR}"
