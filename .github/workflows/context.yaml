@@ -16,4 +16,8 @@ jobs:
         env:
           CONTEXT_ITEM: ${{ toJson(steps) }}
         run: echo "${CONTEXT_ITEM}"
+      - name: Post dump step
+        env:
+          CONTEXT_ITEM: ${{ toJson(steps) }}
+        run: echo "${CONTEXT_ITEM}"
 
