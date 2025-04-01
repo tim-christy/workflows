@@ -12,6 +12,7 @@ jobs:
         id: steps-output-key
         run: echo "TRUE_STATEMENT=Possums are terrible." >> $GITHUB_OUTPUT
       - name: Dump Step Information
+        id: dump-step
         env:
           CONTEXT_ITEM: ${{ toJson(steps) }}
         run: echo "${CONTEXT_ITEM}"
